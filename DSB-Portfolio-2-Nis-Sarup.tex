@@ -100,4 +100,47 @@
 		% subsection kaiser_window (end)
 	% section window_method (end)
 	
+\newpage
+	\section{Frequency Sampling Method} % (fold)
+	\label{sec:frequency_sampling_method}
+		\subsection{Setup} % (fold)
+		\label{sub:setup}
+			I change the low cut frequency to 1000Hz and the upper cut frequency to 3000Hz. Here is the relevant mathematica functions ($cL$ and $cH$ is calculated the same way as in Section 1.):
+			\begin{eqnarray}
+				M &=& 12; \nonumber \\
+				H[k\_] &:=& If[cL < \frac{2 \pi k}{2 M +1} < cH, 1, 0];  \nonumber \\
+				h[n\_] &:=& \frac{1}{2M +1} (H[0] + 2 \sum\limits_{k=1}^M (H[k] Cos[\frac{2\pi k(n-M)}{2M+1}])); \nonumber \\
+			\end{eqnarray}
+			The bandpass frequency response vector is then:
+			\begin{equation}
+				\{0, 0, 0, 0, 1, 1, 1, 1, 1, 1, 0, 0, 0\} \nonumber \\
+			\end{equation}
+			And with a smooth transition:
+			\begin{equation}
+				\{0, 0, 0, 0.5, 1, 1, 1, 1, 1, 1, 0.5, 0, 0\} \nonumber \\
+			\end{equation}
+			Here is the plot for a 25 tap frequency sampling filter:
+			\begin{figure}[h]
+				\centering
+					\includegraphics[width=9cm]{images/opgave_3_a_1.png}
+				\caption{Frequency Sampling methos, with smooth transition.}
+				\label{fig:images_opgave_3_a_1}
+			\end{figure}
+		% subsection setup (end)
+\newpage
+		\subsection{Increasing and decreasing the taps} % (fold)
+		\label{sub:increasing_and_decreasing_the_taps}
+		Increasing and decreasing the taps on a filter will have an effect. Here is plots of different tap sizes:
+		\begin{figure}[h]
+			\centering
+				\includegraphics[width=9cm]{images/opgave_3_b.png}
+			\caption{25, 31 and 67 tap Frequence Sampling filter plots.}
+			\label{fig:images_opgave_3_b}
+		\end{figure}
+		% subsection increasing_and_decreasing_the_taps (end)
+		\subsection{Discussion} % (fold)
+		\label{sub:discussion}
+			The higher tap-number chosen when designing the Frequency Sampling filter, the higher the precision of the filter. The main-lobe follows a straight line better and dips faster at the cut-frequencies.
+		% subsection discussion (end)
+	% section frequency_sampling_method (end)
 \end{document}
