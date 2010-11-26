@@ -140,7 +140,28 @@
 		% subsection increasing_and_decreasing_the_taps (end)
 		\subsection{Discussion} % (fold)
 		\label{sub:discussion}
-			The higher tap-number chosen when designing the Frequency Sampling filter, the higher the precision of the filter. The main-lobe follows a straight line better and dips faster at the cut-frequencies.
+			The higher the tap-number chosen when designing the Frequency Sampling filter, the higher the precision of the filter. The main-lobe follows a straight line better and dips faster at the cut-frequencies.
 		% subsection discussion (end)
 	% section frequency_sampling_method (end)
+	
+\newpage
+	\section{Parks-McClellan algorithm} % (fold)
+	\label{sec:parks_mcclellan_algorithm}
+		Variables used:
+		\begin{eqnarray}
+			dP &=& 10^{\frac{0.05}{20}} -1 = 0,00577306 \nonumber \\
+			dS &=& 10^{\frac{-50}{20}} = 0,00316228 \nonumber \\
+			W &=& \frac{dP}{dS} = \frac{0,00577306}{0,00316228} \approx \frac{18}{10} \nonumber \\
+			WS &=& 18 \nonumber \\
+			WP &=& 10 \nonumber \\
+		\end{eqnarray}
+		The only thing that needs changing from the MathLab program 7.16 in the book is error weight factors. The rest is the same. Here is the plot of the filter:
+		\begin{figure}[h]
+			\centering
+				\includegraphics[width=9cm]{images/opgave_4.png}
+			\caption{Parks-McClellan filter}
+			\label{fig:images_opgave_4}
+		\end{figure}
+		
+	% section parks_mcclellan_algorithm (end)
 \end{document}

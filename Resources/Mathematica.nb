@@ -10,10 +10,10 @@
 NotebookFileLineBreakTest
 NotebookFileLineBreakTest
 NotebookDataPosition[       145,          7]
-NotebookDataLength[     20998,        529]
-NotebookOptionsPosition[     19807,        483]
-NotebookOutlinePosition[     20145,        498]
-CellTagsIndexPosition[     20102,        495]
+NotebookDataLength[     23746,        609]
+NotebookOptionsPosition[     22056,        547]
+NotebookOutlinePosition[     22394,        562]
+CellTagsIndexPosition[     22351,        559]
 WindowFrame->Normal*)
 
 (* Beginning of Notebook Content *)
@@ -479,6 +479,70 @@ Cell[BoxData[
    3.499761161171502*^9, 3.499761215959457*^9, 3.4997612925489063`*^9, 
    3.499761329921335*^9, 3.499761830668211*^9}]
 }, Open  ]]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["Opgave 4", "Section",
+ CellChangeTimes->{{3.4997670690939207`*^9, 3.499767070725132*^9}}],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[{
+ RowBox[{"dP", " ", "=", " ", 
+  RowBox[{
+   SuperscriptBox["10", 
+    FractionBox["0.05", "20"]], "-", "1"}]}], "\[IndentingNewLine]", 
+ RowBox[{"dS", " ", "=", " ", 
+  RowBox[{
+   SuperscriptBox["10", 
+    FractionBox[
+     RowBox[{"-", "50"}], "20"]], "//", "N"}]}], "\[IndentingNewLine]", 
+ RowBox[{"W", " ", "=", " ", 
+  FractionBox["dP", "dS"]}], "\[IndentingNewLine]", 
+ RowBox[{"WS", " ", "=", " ", "18"}], "\[IndentingNewLine]", 
+ RowBox[{"WP", " ", "=", " ", "10"}]}], "Input",
+ CellChangeTimes->{{3.4997671700222063`*^9, 3.499767279390175*^9}, {
+  3.499767413872897*^9, 3.499767422816968*^9}, {3.4997675675185127`*^9, 
+  3.499767592601719*^9}}],
+
+Cell[BoxData["0.005773063001738299`"], "Output",
+ CellChangeTimes->{{3.499767199576829*^9, 3.499767239084635*^9}, 
+   3.499767280200489*^9, 3.499767417005425*^9, 3.4997675940252533`*^9}],
+
+Cell[BoxData["0.0031622776601683794`"], "Output",
+ CellChangeTimes->{{3.499767199576829*^9, 3.499767239084635*^9}, 
+   3.499767280200489*^9, 3.499767417005425*^9, 3.499767594027131*^9}],
+
+Cell[BoxData["1.8256028161141626`"], "Output",
+ CellChangeTimes->{{3.499767199576829*^9, 3.499767239084635*^9}, 
+   3.499767280200489*^9, 3.499767417005425*^9, 3.4997675940285482`*^9}],
+
+Cell[BoxData["18"], "Output",
+ CellChangeTimes->{{3.499767199576829*^9, 3.499767239084635*^9}, 
+   3.499767280200489*^9, 3.499767417005425*^9, 3.4997675940299473`*^9}],
+
+Cell[BoxData["10"], "Output",
+ CellChangeTimes->{{3.499767199576829*^9, 3.499767239084635*^9}, 
+   3.499767280200489*^9, 3.499767417005425*^9, 3.499767594031352*^9}]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[{
+ RowBox[{"W", "-", 
+  FractionBox["18", "10"]}], "\[IndentingNewLine]", 
+ RowBox[{"3.86", "-", 
+  FractionBox["39", "10"]}]}], "Input",
+ CellChangeTimes->{{3.499767511557848*^9, 3.499767550827208*^9}}],
+
+Cell[BoxData["0.025602816114162597`"], "Output",
+ CellChangeTimes->{{3.4997675211569242`*^9, 3.499767552507625*^9}}],
+
+Cell[BoxData[
+ RowBox[{"-", "0.040000000000000036`"}]], "Output",
+ CellChangeTimes->{{3.4997675211569242`*^9, 3.499767552532443*^9}}]
+}, Open  ]]
 }, Open  ]]
 },
 WindowSize->{623, 718},
@@ -499,7 +563,7 @@ CellTagsIndex->{}
 Notebook[{
 Cell[CellGroupData[{
 Cell[567, 22, 93, 1, 67, "Section"],
-Cell[663, 25, 1401, 43, 185, "Input"],
+Cell[663, 25, 1401, 43, 189, "Input"],
 Cell[CellGroupData[{
 Cell[2089, 72, 327, 8, 27, "Input"],
 Cell[2419, 82, 2589, 45, 178, "Output"]
@@ -529,6 +593,22 @@ Cell[17950, 439, 603, 8, 27, "Output"]
 Cell[CellGroupData[{
 Cell[18590, 452, 316, 9, 27, "Input"],
 Cell[18909, 463, 870, 16, 58, "Output"]
+}, Open  ]]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[19828, 485, 95, 1, 67, "Section"],
+Cell[CellGroupData[{
+Cell[19948, 490, 670, 16, 138, "Input"],
+Cell[20621, 508, 186, 2, 27, "Output"],
+Cell[20810, 512, 185, 2, 27, "Output"],
+Cell[20998, 516, 184, 2, 27, "Output"],
+Cell[21185, 520, 167, 2, 27, "Output"],
+Cell[21355, 524, 165, 2, 27, "Output"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[21557, 531, 216, 5, 84, "Input"],
+Cell[21776, 538, 116, 1, 27, "Output"],
+Cell[21895, 541, 133, 2, 27, "Output"]
 }, Open  ]]
 }, Open  ]]
 }
