@@ -155,13 +155,57 @@
 			WS &=& 18 \nonumber \\
 			WP &=& 10 \nonumber \\
 		\end{eqnarray}
-		The only thing that needs changing from the MathLab program 7.16 in the book is error weight factors. The rest is the same. Here is the plot of the filter:
+		The only things that needs changing from the MathLab program 7.16 in the book is the error weight factors and the order of the filter. The rest is the same. Here is the plot of the filter:
 		\begin{figure}[h]
 			\centering
 				\includegraphics[width=9cm]{images/opgave_4.png}
 			\caption{Parks-McClellan filter}
 			\label{fig:images_opgave_4}
 		\end{figure}
+		I tried a few different orders to get the stopband attenuation below -50dB.
 		
+		Here is the MathLab code used:
+		\begin{verbatim}
+			fs = 8000;
+			f = [0 0.15 0.25 0.4 0.5 1];
+			m = [0 0 1 1 0 0];
+			w = [18 10 18];
+			format long
+			b = remez(55,f,m,w)
+			freqz(b,1,512,fs);
+			axis([0 fs/2 -80 10])
+		\end{verbatim}
 	% section parks_mcclellan_algorithm (end)
+\newpage
+	\section{Discussion of the four design methods} % (fold)
+	\label{sec:discussion_of_the_four_design_methods}
+		\subsection{Fourier and Windowed Fourier Transform Method} % (fold)
+		\label{sub:fourier_and_windowed_fourier_transform_method}
+			I'll discuss the Normal and windowed Fourier Transform Methods as one here as they are quite similar.
+			\begin{itemize}
+				\item Somewhat simple.
+				\item Can be done on a calculator if needed.
+				\item Can only be used for lowpass, highpasss, stopband and passband filters.
+			\end{itemize}
+		% subsection fourier_and_windowed_fourier_transform_method (end)
+		
+		\subsection{Discussion of the Frequency Sampling method} % (fold)
+		\label{sub:discussion_of_the_frequency_sampling_method}
+			\begin{itemize}
+				\item Simple equations.
+				\item Can also be done on a calculator.
+				\item Can be used for arbitrary filters, not only the 4 common types.
+			\end{itemize}
+		% subsection discussion_of_the_frequency_sampling_method (end)
+		
+		\subsection{Discussion of Parks-McClellan method} % (fold)
+		\label{sub:discussion_of_parks_mcclellan_method}
+			\begin{itemize}
+				\item Complicated equations.
+				\item A computer is needed.
+				\item Can also be used to design arbitrary filters.
+			\end{itemize}
+		% subsection discussion_of_parks_mcclellan_method (end)
+	Having the computational power available, I would probably use the last method.
+	% section discussion_of_the_four_design_methods (end)
 \end{document}
